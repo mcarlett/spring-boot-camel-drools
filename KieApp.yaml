@@ -22,5 +22,10 @@ spec:
             reference: 7.13.x
           kieServerContainerDeployment: >-
             decisionserver-hellorules=org.openshift.quickstarts:rhpam-kieserver-decisions:1.6.0-SNAPSHOT
+          env:
+            - name: MAVEN_MIRROR_URL
+              value: 'https://maven.repository.redhat.com/ga'
+            - name: MAVEN_MIRROR_OF
+              value: 'redhat-ga-repository'
         replicas: 1
   environment: rhpam-production-immutable
